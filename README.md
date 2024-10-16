@@ -1,5 +1,5 @@
 # Sistema de Árvore Binária
-[Descrição](#descrição) | [Funcionalidades](#funcionalidades) | [Limitações](#limitações) | [Instruções para Uso](#instruções-para-uso)
+[Descrição](#descrição) | [Funcionalidades](#funcionalidades) | [Limitações](#limitações) | [Exemplo visual](#exemplo-visual) | [Instruções para Uso](#instruções-para-uso)
 
 ## Descrição
 Este projeto implementa um sistema de árvore binária que aceita e manipula números inteiros. Ele oferece funcionalidades de adicionar, remover e apagar todos os nós da árvore, além de permitir a exibição da estrutura da árvore de forma gráfica e organizada.
