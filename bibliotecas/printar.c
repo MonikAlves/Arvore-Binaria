@@ -21,14 +21,14 @@ void limparTerminal() {
 
 void exibirMenu() {
     limparTerminal();
-    printf("====================================\n");
-    printf("=       Gerenciador de Árvore       =\n");
-    printf("====================================\n");
-    printf("= 1. Adicionar Arvore               =\n");
-    printf("= 2. Retirar Vértice                =\n");
-    printf("= 3. Apagar Toda a Árvore           =\n");
-    printf("= 4. Sair                           =\n");
-    printf("====================================\n\n");
+    printf("=============================\n");
+    printf("=       Árvore Binária      =\n");
+    printf("=============================\n");
+    printf("= 1. Adicionar Nó           =\n");
+    printf("= 2. Remover Nó             =\n");
+    printf("= 3. Apagar Toda a Árvore   =\n");
+    printf("= 4. Sair                   =\n");
+    printf("=============================\n\n");
 }
 
 void print_level(asciinode *nodo, int x, int nivel) {
