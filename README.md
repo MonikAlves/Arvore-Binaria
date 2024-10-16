@@ -15,7 +15,7 @@ Este projeto implementa um sistema de árvore binária que aceita e manipula nú
   - Caso o usuário deseje, a árvore inteira pode ser apagada, removendo todos os nós e liberando a memória associada.
 
 ## Limitações
-Por enqunato a árvore binária só aceita números inteiros.
+Por enqunato a árvore binária só aceita números inteiros, adicionarei mais opção depois.
 Operações de inserção e remoção estão limitadas à manutenção da estrutura da árvore binária simples.
 Não há suporte para inserção ou manipulação de valores não numéricos.
 
