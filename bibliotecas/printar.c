@@ -3,7 +3,8 @@
 #include <string.h>
 #include <math.h>
 #include "arvore.h"
-#include "printar.h"
+#include "print.h"
+
 #define MAX_HEIGHT 1000
 
 int lprofile[MAX_HEIGHT];
@@ -22,12 +23,13 @@ void limparTerminal() {
 void exibirMenu() {
     limparTerminal();
     printf("=============================\n");
-    printf("=       Árvore Binária      =\n");
+    printf("=  Árvore Binária de Busca  =\n");
     printf("=============================\n");
-    printf("= 1. Adicionar Nó           =\n");
-    printf("= 2. Remover Nó             =\n");
-    printf("= 3. Apagar Toda a Árvore   =\n");
-    printf("= 4. Sair                   =\n");
+    printf("= 1. Adicionar Nós          =\n");
+    printf("= 2. Remover Nós            =\n");
+    printf("= 3. Procurar Valor         =\n");
+    printf("= 4. Refazer a Árvore       =\n");
+    printf("= 5. Sair                   =\n");
     printf("=============================\n\n");
 }
 

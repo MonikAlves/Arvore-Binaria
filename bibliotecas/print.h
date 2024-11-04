@@ -1,6 +1,6 @@
 #include "arvore.h"
-#ifndef __PRINTAR_H__
-#define __PRINTAR_H__
+#ifndef __PRINT_H__
+#define __PRINT_H__
 
 typedef struct asciinode {
     struct asciinode * esquerda, * direita;

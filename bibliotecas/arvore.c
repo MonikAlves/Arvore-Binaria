@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "printar.h"
+#include <string.h>
+#include "arvore.h"
+#include "print.h"
 
 Arvore* novaArvore(int valor) {
     Arvore* arvore = (Arvore*)malloc(sizeof(Arvore));
@@ -21,52 +23,17 @@ Arvore* inserir(Arvore* arvore, int valor) {
     return arvore;
 }
 
-void processarValores(char* valores, Arvore** arvore) {
-    char valor[20];
-    int i = 0; 
-    int j = 0;
-    
-    while (valores[i] != '\0') {
-        if (valores[i] >= '0' && valores[i] <= '9') {
+int busca(Arvore* arvore, int valor){
+    if (arvore == NULL) return -1;
+    int passos = 0;
 
-            valor[j++] = valores[i]; 
+    if (valor < arvore->valor)
+        passos = busca(arvore->esquerda, valor);
+    else if(valor > arvore->valor)
+        passos = busca(arvore->direita, valor);
 
-        } else if (valores[i] == ' ' || valores[i + 1] == '\0') {
-            if (j > 0) { // Verifica se temos um número para processar
-                valor[j] = '\0'; // Finaliza a string
-                int aux = 0;
-
-            for(int k = 0; k<j; k++){
-                aux *= 10;
-                aux += valor[k] - '0';
-            }
-
-            if (*arvore == NULL) {
-                *arvore = novaArvore(aux);
-            } else {
-                inserir(*arvore, aux);
-            }
-        
-            j = 0; 
-        }
-        }
-        i++;
-    }
-     if (j > 0) {
-        valor[j] = '\0';
-        int aux = 0;
-
-        for (int k = 0; k < j; k++) {
-            aux *= 10;
-            aux += valor[k] - '0';
-        }
-
-        if (*arvore == NULL) {
-            *arvore = novaArvore(aux);
-        } else {
-            inserir(*arvore, aux);
-        }
-    }
+    if(passos == -1) return passos;
+    else return passos + 1;
 
 }
 
@@ -79,13 +46,13 @@ Arvore* valorMinimo(Arvore* arvore) {
     return atual;
 }
 
-Arvore * removerArvore(Arvore* arvore, int valor) {
+Arvore * remover(Arvore* arvore, int valor) {
     if (arvore == NULL) return arvore;
 
     if (valor < arvore->valor)
-        arvore->esquerda = removerArvore(arvore->esquerda, valor);
+        arvore->esquerda = remover(arvore->esquerda, valor);
     else if (valor > arvore->valor)
-        arvore->direita = removerArvore(arvore->direita, valor);
+        arvore->direita = remover(arvore->direita, valor);
     else {
         if (arvore->esquerda == NULL) {
             Arvore* temp = arvore->direita;
@@ -100,7 +67,7 @@ Arvore * removerArvore(Arvore* arvore, int valor) {
 
         Arvore* temp = valorMinimo(arvore->direita);
         arvore->valor = temp->valor;
-        arvore->direita = removerArvore(arvore->direita, temp->valor);
+        arvore->direita = remover(arvore->direita, temp->valor);
     }
     return arvore;
 }
