@@ -28,7 +28,7 @@ void menu(Arvore* arvore) {
 
         switch (opcao) {
             case 1:  // Adicionar vértice
-                printf("Digite os valores a serem inseridos:\n>> ");
+                printf("Digite os valores a serem inseridos, para finalizar digite '!':\n>> ");
                 while (1){
                     scanf("%s",valor);
                     if (!strcmp(valor,"!")) break;
@@ -36,7 +36,7 @@ void menu(Arvore* arvore) {
                 }
                 break;
             case 2:  // Remover vértice
-                printf("Digite os valores a serem inseridos:\n>> ");
+                printf("Digite os valores a serem inseridos, para finalizar digite '!':\n>> ");
                 while (1){
                     scanf("%s",valor);
                     if (!strcmp(valor,"!")) break;
@@ -77,7 +77,7 @@ void menu(Arvore* arvore) {
 
             case 6: 
 
-                printf("Digite os valores a serem inseridos:\n>> ");
+                printf("\nDigite os valores a serem inseridos, para finalizar digite '!':\n>> ");
                 while (1){
                     scanf("%s",valor);
                     if (!strcmp(valor,"!")) break;
