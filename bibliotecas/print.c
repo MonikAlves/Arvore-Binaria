@@ -23,7 +23,7 @@ void limparTerminal() {
 void exibirMenu() {
     limparTerminal();
     printf("=============================\n");
-    printf("=  Árvore Binária de Busca  =\n");
+    printf("=       Árvore Binária      =\n");
     printf("=============================\n");
     printf("= 1. Adicionar Nós          =\n");
     printf("= 2. Remover Nós            =\n");
